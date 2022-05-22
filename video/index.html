@@ -1,0 +1,26 @@
+<style>
+    video {
+  width: 100%;
+  height: 100%;
+}
+
+</style>
+
+
+
+
+<video src="" controls >
+  Sorry, your browser doesn't support HTML5 <code>video</code> element.
+</video>
+
+
+<script defer> 
+    function getPrameter( prameterName ){
+      let parameters = new URLSearchParams( window.location.search );
+      return parameters.get( prameterName );
+    }
+
+    let url = getPrameter( 'url' );
+
+    document.querySelector( 'video' ).src = url;
+</script>
