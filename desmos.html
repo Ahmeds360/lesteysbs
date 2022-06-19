@@ -28,7 +28,16 @@
 
     for (let i = 0; i < queryList.length; i++) {
       let query = queryList[i];
-      calculator.setExpression({ id: 'graph ' + i, latex: query });
+      if (query.includes("point")) {
+        pointName = query.split(":")[0].replace("point", "");
+        point = query.split(":")[1];
+        calculator.setExpression({ id: 'graph ' + i, latex: point, label: pointName.replace("%20", " "), showLabel: true });
+
+      }
+      else {
+        calculator.setExpression({ id: 'graph ' + i, latex: query });
+      }
+
 
     }
     
