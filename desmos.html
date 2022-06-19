@@ -31,7 +31,7 @@
       if (query.includes("point")) {
         pointName = query.split(":")[0].replace("point", "");
         point = query.split(":")[1];
-        calculator.setExpression({ id: 'graph ' + i, latex: point, label: pointName.replace("%20", " "), showLabel: true });
+        calculator.setExpression({ id: 'graph ' + i, latex: point, label: pointName.replace("%20", " "), showLabel: true, lines: true });
 
       }
       else {
