@@ -21,7 +21,7 @@
     var elt = document.getElementById('calculator');
     var calculator = Desmos.GraphingCalculator(elt);
     let queryString = window.location.search;
-    queryString = queryString.replace("?equation=", "").replace("!", "\\");
+    queryString = queryString.replace("?equation=", "").replace("!", "\\").replace("%3C", "<");
     queryList = queryString.split("|");
 
     for (let i = 0; i < queryList.length; i++) {
