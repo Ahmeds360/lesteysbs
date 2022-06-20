@@ -23,7 +23,7 @@
     //get parameters from url
     let queryString = window.location.search;
     //remove ? from queryString
-    queryString = queryString.replace("?equation=", "");
+    queryString = queryString.replace("?equation=", "")replace("!", "\\");
     queryList = queryString.split("|");
 
     for (let i = 0; i < queryList.length; i++) {
